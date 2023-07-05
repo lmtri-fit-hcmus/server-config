@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    host: localhost
+    username: rabbitmq-user
+    password: rabbitmq-pass-123
+websocket:
+  rabbitmq:
+    stomp:
+      clientLogin: rabbitmq-user
+      clientPasscode: rabbitmq-pass-123
+      systemLogin: rabbitmq-user
+      systemPasscode: rabbitmq-pass-123
+      relayPort: 61613
+      relayHost: 127.0.0.1

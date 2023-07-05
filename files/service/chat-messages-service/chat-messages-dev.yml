@@ -1,0 +1,23 @@
+spring:
+  data:
+    mongodb:
+      user: chat-messages-service-root
+      password: chat-messages-service-root-pass-123
+      uri: mongodb://chat-messages-service-root:chat-messages-service-root-pass-123@localhost:28017/chat_messages_service_database?authSource=admin
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbitmq-user
+    password: rabbitmq-pass-123
+    listener:
+      simple:
+        default-requeue-rejected: false
+server:
+  port: 9996
+
+logging:
+  level:
+    pl:
+      kubaretip:
+        chatmessagesservice: debug

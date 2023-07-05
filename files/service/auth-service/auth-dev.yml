@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_service_database?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: auth-service-user
+    password: auth-service-pass-123
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: rabbitmq-user
+    password: rabbitmq-pass-123
+logging:
+  level:
+    pl:
+      kubaretip:
+        authservice: debug
+
+server:
+  port: 9999
+  forward-headers-strategy: framework

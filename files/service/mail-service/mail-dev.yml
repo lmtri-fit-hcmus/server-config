@@ -1,0 +1,34 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: nnduy8501@gmail.com
+    password: henohdkjjmzfbynw
+    protocol: smtp
+    tls: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+  task:
+    execution:
+      thread-name-prefix: mail-service-task-
+      pool:
+        core-size: 2
+        max-size: 25
+        queue-capacity: 10000
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: rabbitmq-user
+    password: rabbitmq-pass-123
+server:
+  port: 9998
+mail:
+  links:
+    baseUrl: http://localhost:4200
+    activation-resource-path: /login?data=

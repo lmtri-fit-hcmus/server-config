@@ -1,0 +1,19 @@
+spring:
+  rabbitmq:
+    host: rabbitmq-service
+    port: 5672
+    username: rabbitmq-user
+    password: rabbitmq-pass-123
+  datasource:
+    url: jdbc:mysql://chat-service-mysql:3307/chat_service_database?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: chat-service-user
+    password: chat-service-pass-123
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  forward-headers-strategy: framework
+logging:
+  level:
+    pl:
+      kubaretip:
+        chatservice: debug
